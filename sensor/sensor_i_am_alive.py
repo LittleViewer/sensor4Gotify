@@ -9,6 +9,6 @@ class sensor_i_am_alive:
             self.uptime_seconds = second
 
     def pipe_lauch_alive(self, address, password):
-        spS.patron_sensor.request(address, password,"I'm alive !",f"Dearest creator, this message is to let you know that I have been running for {(self.uptime_seconds/60)/60} hours now!")
+        spS.patron_sensor.request(address, password,"I'm alive !",f"Dearest creator, this message is to let you know that I have been running for {(round(self.uptime_seconds/60)/60)} hours now!")
     def __init__(self):
         self.get_uptime()

@@ -1,5 +1,6 @@
 #base source : https://github.com/LittleViewer/WeakSignalFinder/blob/main/libCore/config_tool_class.py in AGPLv3
 import tomllib
+import utils_class as utC
 
 class config_toml_tool:
 
@@ -16,5 +17,6 @@ class config_toml_tool:
             return self.config[table][sub_table][key]
 
     def __init__(self, path = "config_weakSignalFinder.toml"):
+        self.utC_ = utC.utils()
         handle = open(self.utC_.absolute_link(path),"rb")
         self.config = tomllib.load(handle)

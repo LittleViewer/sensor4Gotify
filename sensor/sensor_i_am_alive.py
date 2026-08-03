@@ -1,11 +1,8 @@
-import requests
+import sensor.patron_sensor as spS
 
 class sensor_i_am_alive:
 
     def pipe_lauch_alive(self, address, password):
-        requests.post(address, headers={"X-Gotify-Key": password}, json={
-            "message": "Well hello there.",
-            "priority": 2,
-            "title": "I'm alive !"})
+        spS.patron_sensor.request(address, password,"I'm alive !","Dearest creator, this message is to let you know that I am still up and running!")
     def __init__(self):
         pass

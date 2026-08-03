@@ -21,4 +21,4 @@ class sensor_cpu_ram:
         self.ctC_ = ctC.config_toml_tool()
         self.ram = psutil.virtual_memory()
         self.ram_usage_percent = self.ram.percent
-        self.cpu_usage = self.cpu_usage(interval=1)
+        self.cpu_usage = psutil.cpu_percent(interval=1)

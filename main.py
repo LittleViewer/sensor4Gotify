@@ -22,3 +22,6 @@ elif args.test:
     sensor.sensor_test.sensor_test().pipe_lauch_test(address, password)
 elif args.cpuANDram:
     sensor.sensor_cpu_and_ram.sensor_cpu_ram().pipe_alert_usage(address, password)
+else:
+    print("Not argument provided")
+    print(f"You can use : {argument_run}")

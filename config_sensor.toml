@@ -1,0 +1,9 @@
+[parameter]
+
+[parameter .flag]
+list_flag = ["i_am_alive","test"]
+
+[parameter .server]
+ip = ""
+port = ""
+password_app = ""

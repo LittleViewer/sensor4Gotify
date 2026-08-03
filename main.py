@@ -16,3 +16,5 @@ args = parser.parse_args()
 
 if args.i_am_alive:
     sensor.sensor_i_am_alive.sensor_i_am_alive().pipe_lauch_alive(address, password)
+elif args.test:
+    sensor.sensor_test.sensor_test().pipe_lauch_test(address, password)

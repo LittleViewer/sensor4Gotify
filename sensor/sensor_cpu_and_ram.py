@@ -5,13 +5,16 @@ import psutil
 class sensor_cpu_ram:
 
     def pipe_alert_usage(self, address, password):
-        title = "Alert usage of "
-        message = "This is an alert regarding "
-        if self.ctC_.key_return("parameter","ram","alert_level") >= self.ram_usage_percent :
+        
+        if self.ctC_.key_return("parameter","ram","alert_level") <= self.ram_usage_percent :
+            title = "Alert usage of "
+            message = "This is an alert regarding "
             title += "RAM"
             message += f"{self.ram_usage_percent}% RAM usage"
             spS.patron_sensor.request(address, password,f"{title} !",f"{message}!")
-        if self.ctC_.key_return("parameter","cpu","alert_level") >= self.cpu_usage:
+        if self.ctC_.key_return("parameter","cpu","alert_level") <= self.cpu_usage:
+            title = "Alert usage of "
+            message = "This is an alert regarding "
             title += "CPU"
             message += f"{self.cpu_usage}% CPU usage"
             spS.patron_sensor.request(address, password,f"{title} !",f"{message}!")

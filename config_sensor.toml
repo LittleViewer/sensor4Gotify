@@ -1,7 +1,7 @@
 [parameter]
 
 [parameter .flag]
-list_flag = ["i_am_alive","test","cpu&ram"]
+list_flag = ["i_am_alive","test","cpuANDram"]
 
 [parameter .alert_level]
 cpu = 90

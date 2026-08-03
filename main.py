@@ -1,6 +1,7 @@
 import config_tool_class
 import sensor.sensor_i_am_alive
 import sensor.sensor_test
+import sensor.sensor_cpu_and_ram
 import argparse
 
 
@@ -19,3 +20,5 @@ if args.i_am_alive:
     sensor.sensor_i_am_alive.sensor_i_am_alive().pipe_lauch_alive(address, password)
 elif args.test:
     sensor.sensor_test.sensor_test().pipe_lauch_test(address, password)
+elif args.cpuANDram:
+    sensor.sensor_cpu_and_ram.sensor_cpu_ram().pipe_alert_usage(address, password)

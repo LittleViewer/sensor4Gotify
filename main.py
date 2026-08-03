@@ -1,5 +1,6 @@
 import config_tool_class
 import sensor.sensor_i_am_alive
+import sensor.sensor_test
 import argparse
 
 

@@ -11,7 +11,7 @@ parser = argparse.ArgumentParser()
 argument_run = ctC_.key_return("parameter","list_flag","flag")
 
 for one_argument in argument_run:
-    parser.add_argument(one_argument, action="store_true")
+    parser.add_argument(f"-{one_argument}", action="store_true")
 args = parser.parse_args()
 
 if args.i_am_alive:

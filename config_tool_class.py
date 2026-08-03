@@ -16,7 +16,7 @@ class config_toml_tool:
                 return False
             return self.config[table][sub_table][key]
 
-    def __init__(self, path = "config_weakSignalFinder.toml"):
+    def __init__(self, path = "config_sensor.toml"):
         self.utC_ = utC.utils()
         handle = open(self.utC_.absolute_link(path),"rb")
         self.config = tomllib.load(handle)
